@@ -23,7 +23,7 @@ public class DBService {
 		RegistroFinanceiro r2 = new RegistroFinanceiro(null, "Pagamento Da Luz", 197.00, TipoRegistro.DESPESA);
 		RegistroFinanceiro r3 = new RegistroFinanceiro(null, "Pagamento Da Internet", 75.00, TipoRegistro.DESPESA);
 		RegistroFinanceiro r4 = new RegistroFinanceiro(null, "Salário", 3800.00, TipoRegistro.RECEITA);
-		RegistroFinanceiro r5 = new RegistroFinanceiro(null, "Aluguel", 2000.00, TipoRegistro.RECEITA);
+		RegistroFinanceiro r5 = new RegistroFinanceiro(null, "Aluguel", 2000.00, TipoRegistro.DESPESA);
 		
 		array.add(r1);
 		array.add(r2);

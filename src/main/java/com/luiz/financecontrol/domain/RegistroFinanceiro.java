@@ -1,6 +1,7 @@
 package com.luiz.financecontrol.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -19,9 +20,11 @@ public class RegistroFinanceiro implements Serializable {
 	private String descricao;
 	private Double valor;
 	private TipoRegistro tipoRegistro;
+	private LocalDate dataRegistro;
 
 	public RegistroFinanceiro() {
 		super();
+		this.dataRegistro = LocalDate.now();
 	}
 
 	public RegistroFinanceiro(Integer id, String descricao, Double valor, TipoRegistro tipoRegistro) {
@@ -30,6 +33,7 @@ public class RegistroFinanceiro implements Serializable {
 		this.descricao = descricao;
 		this.valor = valor;
 		this.tipoRegistro = tipoRegistro;
+		this.dataRegistro = LocalDate.now();
 	}
 
 	public Integer getId() {
@@ -62,6 +66,14 @@ public class RegistroFinanceiro implements Serializable {
 
 	public void setTipoRegistro(TipoRegistro tipoRegistro) {
 		this.tipoRegistro = tipoRegistro;
+	}
+
+	public LocalDate getDataRegistro() {
+		return dataRegistro;
+	}
+
+	public void setDataRegistro(LocalDate dataRegistro) {
+		this.dataRegistro = dataRegistro;
 	}
 
 	@Override
